@@ -1,0 +1,6 @@
+- name: Task to add firewall rules
+  hosts: gitlab-server
+  become: yes
+  remote_user: root
+  tasks:
+    - include: tasks/main.yml
