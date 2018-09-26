@@ -16,7 +16,7 @@
 - name: Update firewall rules
   become: yes
   firewalld:
-    port: "{{ item.value.port }}/{{ item.value.protocol }}"
+    service: {{ item.value.service }}
     permanent: "{{ item.value.permanent }}"
     state: "{{ item.value.state }}"
     zone: "{{ item.value.zone }}"

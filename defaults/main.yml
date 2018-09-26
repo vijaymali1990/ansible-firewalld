@@ -7,23 +7,14 @@ firewalld_debug: false
 
 # Add or remove firewall rules. By default will allow ssh connections.
 firewalld_rules:
-  ssh:
-    port: 22
-    protocol: tcp
-    state: enabled
-    zone: public
-    permanent: true
-
   http:
-    port: 80
-    protocol: tcp
+    service: http
     state: enabled
     zone: public
     permanent: true
 
   https:
-    port: 443
-    protocol: tcp
+    service: https
     state: enabled
     zone: public
     permanent: true
